@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
              when {
 	        expression { BRANCH_NAME ==~ /(master|dev.*|hotfix.*)/ }
-	        }              steps {
+	        }              
+		steps {
                 echo 'Building..'
             }
         }
